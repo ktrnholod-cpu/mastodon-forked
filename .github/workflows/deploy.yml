@@ -25,3 +25,14 @@ jobs:
         uses: zaproxy/action-baseline@v0.11.0
         with:
           target: "http://localhost:8080"
+
+      - name: Build Docker image
+        run: |
+        docker build -t username/gala_projekts:latest .
+
+      - name: Scan Docker image
+        uses: aquasecurity/trivy-action@master
+        with:
+           image-ref: "username/gala_projekts:latest"
+
+           

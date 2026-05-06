@@ -411,3 +411,7 @@ USER mastodon
 EXPOSE 3000
 # Set container tini as default entry point
 ENTRYPOINT ["/usr/bin/tini", "--"]
+
+
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
