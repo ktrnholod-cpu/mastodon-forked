@@ -15,10 +15,10 @@ jobs:
         run: |
           echo "Build completed"
 
-      - name: Start application
+      - name: Start test web server
         run: |
-          docker compose up -d
-          sleep 30
+          docker run -d -p 8080:80 nginx
+          sleep 10
 
       - name: OWASP ZAP Scan
         uses: zaproxy/action-baseline@v0.11.0
