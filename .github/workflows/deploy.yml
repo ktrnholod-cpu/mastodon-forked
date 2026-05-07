@@ -28,11 +28,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-        docker build -t username/gala_projekts:latest .
+          docker build -t username/gala_projekts:latest .
 
       - name: Scan Docker image
         uses: aquasecurity/trivy-action@master
         with:
            image-ref: "username/gala_projekts:latest"
 
-           
