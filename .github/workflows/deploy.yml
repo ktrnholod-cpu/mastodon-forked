@@ -33,5 +33,5 @@ jobs:
       - name: Scan Docker image
         uses: aquasecurity/trivy-action@master
         with:
-           image-ref: "username/gala_projekts:latest"
+          image-ref: "username/gala_projekts:latest"
 
