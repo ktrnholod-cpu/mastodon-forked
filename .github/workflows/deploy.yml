@@ -35,3 +35,5 @@ jobs:
         with:
           image-ref: "username/gala_projekts:latest"
 
+      - name: Scan secrets
+        uses: gitleaks/gitleaks-action@v2
